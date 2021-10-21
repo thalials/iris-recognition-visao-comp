@@ -12,8 +12,8 @@ import argparse
 def iris_model_train(train_db_path, train_encoding_model_path):
     if os.path.exists(train_db_path):
         if os.path.exists(train_encoding_model_path):
-            iris_names = iris_test_model(train_db_path, train_encoding_model_path)
-            return iris_names
+            iris_names, lista = iris_test_model(train_db_path, train_encoding_model_path)
+            return iris_names, lista
         else:
             print("encoding model path not exist")
             return "encoding model path not exist"
